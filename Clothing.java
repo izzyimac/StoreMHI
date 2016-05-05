@@ -1,22 +1,22 @@
-package DepartmentStore;
+package project;
 
-import java.awt.Color;
-
-
-
-public class Clothing extends Item implements Basic{
-
-public String name;
-public double price;
-public String brand;
-public String type;
-public double size;
+public class Clothing extends Item{
 	
-	public Clothing(){
+	//public String name;
+	public double price;
+	public String brand;
+	public String type;
+	public double size;
 		
+	public Clothing()
+	{
+		super();
 	}
-	public Clothing(String name, double price, String brand, String type, double size){
-		setName(name);
+	
+	public Clothing(String type, String brand, double price, double size)
+	{
+		super(type, brand, price);
+		setSize(size);
 		
 	}
 	
@@ -24,9 +24,7 @@ public double size;
 		return size;
 	}
 	
-	public String getName() {
-		return name;
-	}
+
 
 	public String getBrand() {
 		return brand;
@@ -40,9 +38,7 @@ public double size;
 		return price;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
+
 
 	public void setBrand(String brand) {
 		this.brand = brand;
@@ -61,7 +57,9 @@ public double size;
 	}
 
 	public String toString(){
-		return "Name: " + getName() + "Brand: " + getBrand() + "Type: "+ getType()+ "Price: "+ getPrice() + "Size: "+ getSize();
+		return "Brand: " + getBrand() + " Type: "+ getType()+ " Price: $"+ getPrice() + " Size: "+ getSize();
 	}
 	
 }
+
+
