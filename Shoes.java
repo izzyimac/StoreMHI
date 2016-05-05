@@ -13,9 +13,12 @@ public class Shoes {
 
 	}
 
-	public Shoes(double price, String brand, String type,
-			double size) {
-
+	public Shoes(double p, String b, String t,
+			double s) {
+		price = p;
+		brand = b;
+		type = t;
+		size = s;
 	}
 
 	public double getSize() {
