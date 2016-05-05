@@ -1,7 +1,10 @@
+package DepartmentStore;
 
 import java.awt.Color;
 
-public class Clothing{
+
+
+public class Clothing extends Item implements Basic{
 
 public String name;
 public double price;
@@ -57,5 +60,8 @@ public double size;
 		this.size = size;
 	}
 
+	public String toString(){
+		return "Name: " + getName() + "Brand: " + getBrand() + "Type: "+ getType()+ "Price: "+ getPrice() + "Size: "+ getSize();
+	}
 	
 }
