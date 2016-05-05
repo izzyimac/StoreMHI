@@ -24,6 +24,18 @@ public class ItemsTester {
 		mascara.setType("mascara");
 		System.out.println(mascara);
 		
+		
+		System.out.println();
+		
+		System.out.println("TESTING SHOES");
+		Shoes shoe = new Shoes();
+		System.out.println(shoe);
+		shoe.setPrice(40.99);
+		shoe.setBrand("Adidas");
+		shoe.setType("sneakers");
+		shoe.setSize(12.0);
+		System.out.println(shoe);
+		
 
 	}
 
