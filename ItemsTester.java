@@ -3,7 +3,8 @@ package project;
 public class ItemsTester {
 
 	public static void main(String[] args) {
-
+		// TODO Auto-generated method stub
+		
 		System.out.println("TESTING KITCHENWARE");
 		KitchenWare fork = new KitchenWare();
 		System.out.println(fork);
@@ -23,6 +24,16 @@ public class ItemsTester {
 		mascara.setType("mascara");
 		System.out.println(mascara);
 		
+		System.out.println();
+		
+		System.out.println("TESTING CLOTHING");
+		Clothing dress = new Clothing();
+		System.out.println(dress);
+		dress.setBrand("Free People");
+		dress.setPrice(30.00);
+		dress.setType("dress");
+		dress.setSize(4);
+		System.out.println(dress);
 		
 		System.out.println();
 		
@@ -35,7 +46,7 @@ public class ItemsTester {
 		shoe.setSize(12.0);
 		System.out.println(shoe);
 		
-
+		
 	}
 
 }
