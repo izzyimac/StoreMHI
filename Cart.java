@@ -40,12 +40,12 @@ public class Cart{
 	}
 	
 	
-	
 	public double getShipping(){
-		if (product.getTotalPrice() > 50.00){
-			
-		}
+		
+		if (getTotalPrice() > 50.00){
+			return 0.0;
+		} else
+			return 10.0;
 	}
-	
 	
 }
