@@ -1,6 +1,6 @@
 package DepartmentStore;
 
-public class KitchenWare implements Basic{
+public class KitchenWare extends Item implements Basic{
 
 	private double price;
 	private String brand;
