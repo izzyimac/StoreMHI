@@ -1,11 +1,11 @@
-package DepartmentStore;
+package project;
 
-public class Cart {
+public class Cart{
 
-	Cart[] product; 
+	Item[] product; 
 	//should receive array of products using different types
 	
-	public void setArray(Cart[] items){
+	public void setArray(Item[] items){
 		product = items;
 	}
 	
@@ -38,6 +38,8 @@ public class Cart {
 		
 		return salesTax;
 	}
+	
+	
 	
 	public double getShipping(){
 		if (product.getTotalPrice() > 50.00){
