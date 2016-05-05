@@ -1,6 +1,6 @@
 package DepartmentStore;
 
-public class Makeup implements Basic{
+public class Makeup extends Item implements Basic{
 
 	private double price;
 	private String brand;
