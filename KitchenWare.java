@@ -1,11 +1,41 @@
-package DepartmentStore;
+package project;
 
-public class KitchenWare extends Item implements Basic{
+public class KitchenWare extends Item{
 
 	private double price;
 	private String brand;
 	public String type;
 	public String rating;
+	
+	public KitchenWare()
+	{
+		super();
+		rating = "NONE";
+	}
+	
+	public KitchenWare(String t)
+	{
+		super(t);
+		rating = "NONE";
+	}
+	
+	public KitchenWare(String t, String b)
+	{
+		super(t, b);
+		rating = "NONE";
+	}
+	
+	public KitchenWare(String t, String b, double p)
+	{
+		super(t, b, p);
+		rating = "NONE";
+	}
+	
+	public KitchenWare(String t, String b, double p, String r)
+	{
+		super(t, b, p);
+		rating = r;
+	}
 	
 	public String getType() {
 		return type;
@@ -57,7 +87,7 @@ public class KitchenWare extends Item implements Basic{
 
 	public String toString(){
 		
-		return "Brand: " +brand+ " Type: " +type+ "Price: "+price+ "Rating: " +rating;
+		return "Brand: " +brand+ " Type: " +type+ " Price: $"+price+ " Rating: " +rating;
 		
 	}
 	

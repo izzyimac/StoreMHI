@@ -1,10 +1,41 @@
-package DepartmentStore;
+package project;
 
-public class Makeup extends Item implements Basic{
+public class Makeup extends Item{
 
 	private double price;
 	private String brand;
 	public String type;
+	
+	
+	public Makeup()
+	{
+		super();
+		//rating = "NONE";
+	}
+	
+	public Makeup(String t)
+	{
+		super(t);
+		//rating = "NONE";
+	}
+	
+	public Makeup(String t, String b)
+	{
+		super(t, b);
+		//rating = "NONE";
+	}
+	
+	public Makeup(String t, String b, double p)
+	{
+		super(t, b, p);
+		//rating = "NONE";
+	}
+	
+	public Makeup(String t, String b, double p, String r)
+	{
+		super(t, b, p);
+		//rating = r;
+	}
 	
 	
 	public void setPrice(double p){
@@ -36,7 +67,7 @@ public class Makeup extends Item implements Basic{
 	
 	public String toString(){
 		
-		return "Brand: " +brand+ " Type: " +type+ "Price: "+price;
+		return "Brand: " +brand+ " Type: " +type+ " Price: $"+price;
 	}
 	
 }
