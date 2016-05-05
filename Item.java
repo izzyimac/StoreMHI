@@ -1,4 +1,4 @@
-package DepartmentStore;
+package project;
 
 public abstract class Item implements Basic {
 	
@@ -6,14 +6,14 @@ public abstract class Item implements Basic {
 	private String type;
 	private String brand;
 	private double price;
-	private String material;
+	//private String material;
 	
 	public Item()
 	{
 		brand = "basicbee";
 		type = "none";
 		price = 0.0;
-		material = "none";
+		//material = "none";
 	}
 	
 	public Item(String t)
@@ -21,7 +21,7 @@ public abstract class Item implements Basic {
 		brand = "basicbee";
 		type = t;
 		price = 0.0;
-		material = "none";
+		//material = "none";
 	}
 	
 	public Item(String t, String b)
@@ -29,7 +29,7 @@ public abstract class Item implements Basic {
 		brand = b;
 		type = t;
 		price = 0.0;
-		material = "none";
+		//material = "none";
 	}
 
 	public Item(String t, String b, double p)
@@ -37,16 +37,9 @@ public abstract class Item implements Basic {
 		brand = b;
 		type = t;
 		price = p;
-		material = "none";
+		//material = "none";
 	}
 	
-	public Item(String t, String b, double p, String m)
-	{
-		setBrand(b);
-		setType(t);
-		setPrice(p);
-		setMaterial(m);
-	}
 	
 	
 	public String getType()
@@ -69,25 +62,21 @@ public abstract class Item implements Basic {
 		price = p;
 	}
 	
-	public String getBrand()
-	{
-		return brand;
-	}
+	public abstract String getBrand();
 	
-	public void setBrand(String b)
-	{
-		brand = b;
-	}
 	
-	public abstract String getMaterial();
+	public abstract void setBrand(String b);
 	
-	public abstract void setMaterial(String m);
+	
+	//public abstract String getMaterial();
+	
+	//public abstract void setMaterial(String m);
 	
 	public String toString()
 	{
 		String output = "";
 		
-		output += getType() + " " + getBrand() + " " + getMaterial() + " $" + getPrice();
+		output += getType() + " " + getBrand() + " $" + getPrice();
 		
 		return output;
 	}
