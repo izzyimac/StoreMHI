@@ -3,8 +3,7 @@ package project;
 public class ItemsTester {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+
 		System.out.println("TESTING KITCHENWARE");
 		KitchenWare fork = new KitchenWare();
 		System.out.println(fork);
