@@ -12,7 +12,11 @@ public class Clothing extends Item{
 	{
 		super();
 	}
-	
+	public Clothing(String type,  String brand, double price){
+		this.type = type;
+		this.brand = brand;
+		this.price = price;
+	}
 	public Clothing(String type, String brand, double price, double size)
 	{
 		super(type, brand, price);
