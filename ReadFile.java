@@ -23,7 +23,7 @@ public Cart loadAndAnalyzeFile() throws IOException
 {
 	Cart myCart = new Cart();
 	
-     String fileName = "Item.dat";
+     String fileName = "items.dat";
 
 	 try {
 		 	ClassLoader loader = ReadFile.class.getClassLoader();
@@ -41,39 +41,55 @@ public Cart loadAndAnalyzeFile() throws IOException
                 new BufferedReader(fileReader);
             
             String line = bufferedReader.readLine();
-    
-            
-           // System.out.println("The class name =" + line);
-            
+   
             line = bufferedReader.readLine();
             int itemsCount = Integer.parseInt(line);
-            
-           // System.out.println("The class student count =" + studentCount);
+           
             
            Item[] items = new Item[itemsCount];
 
-            String brand;
+           String itemType; 
+           String brand;
             String type;
             String stringPrice;
             
             int index = 0;
 	 
-       while( (brand = bufferedReader.readLine()) != null  && (type = bufferedReader.readLine())!= null && (stringPrice = bufferedReader.readLine())!= null ) {
+       while((itemType = bufferedReader.readLine()) != null && (brand = bufferedReader.readLine()) != null  && (type = bufferedReader.readLine())!= null && (stringPrice = bufferedReader.readLine())!= null ) {
     	   
-    	 //  double price = Double.parseDouble(stringPrice);
+    	   double price = Double.parseDouble(stringPrice);
     	   
-            	Item oneItem = new Item(type, brand, Double.parseDouble(stringPrice));
-            	
-            
-            	items[index] = oneItem;
-            	
-            	index++;
-            	
+    	if (itemType.equalsIgnoreCase("makeup")){
+    		Item oneItem = new Makeup(type, brand, price);
+    	 	items[index] = oneItem;
+        	
+        	index++;
+    	}
+    	else if (itemType.equalsIgnoreCase("kitchenware")){
+    		Item oneItem = new Kitchenware(type, brand, price);
+    	 	items[index] = oneItem;
+        	
+        	index++;
+    	}
+    	else if (itemType.equalsIgnoreCase("clothing")){
+    		Item oneItem = new Clothing(type, brand, price);
+    	 	items[index] = oneItem;
+        	
+        	index++;
+    	}
+    	else if (itemType.equalsIgnoreCase("shoes")){
+    		Item oneItem = new Shoes(type, brand, price);
+    	 	items[index] = oneItem;
+        	
+        	index++;
+    	}
+            	//Item oneItem = new Item(type, brand, Double.parseDouble(stringPrice));
+            	 
+      
        }
-	 
            myCart.setArray(items);;
 
-            // Always close files.
+           
             bufferedReader.close();         
         }
         catch(FileNotFoundException ex) {
@@ -85,8 +101,7 @@ public Cart loadAndAnalyzeFile() throws IOException
             System.out.println(
                 "Error reading file '" 
                 + fileName + "'");                  
-            // Or we could just do this: 
-            // ex.printStackTrace();
+
         }
 	 
 	 
@@ -97,9 +112,8 @@ public Cart loadAndAnalyzeFile() throws IOException
 
  public static void main( String args[] ) throws Exception
    {
-		out.println("Welcome to the Class Stats program!");
-		
-		//Scanner file = new Scanner(new File("gradebook.dat"));
+
+
 		ReadFile myRunner = new ReadFile();
 		Cart myCart = myRunner.loadAndAnalyzeFile();
 		
