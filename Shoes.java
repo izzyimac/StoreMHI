@@ -12,7 +12,11 @@ public class Shoes {
 	public Shoes() {
 
 	}
-
+	public Shoes (String type, String brand, double price){
+	this.type = type;
+	this.brand = brand;
+	this.price = price;
+	}
 	public Shoes(double p, String b, String t,
 			double s) {
 		price = p;
