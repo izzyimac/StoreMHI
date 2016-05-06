@@ -1,4 +1,4 @@
-package project;
+package DepartmentStore;
 
 public class Cart{
 
