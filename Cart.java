@@ -51,11 +51,10 @@ public class Cart{
 	
 	
 	public String toString(){
-		String str = "Price of Goods: "+getTotalPrice()+ "Names of Products: "+getNames()+ "Taxes: " 
-				+getTaxes()+ "Shipping: " +getShipping()+ 
-				"/nTotal Price: " +(getTotalPrice() + getTaxes() + getShipping());
+		String str = "Price of Goods: "+getTotalPrice()+ " Names of Products: "+getNames()+ "\nTaxes: " 
+				+getTaxes()+ " Shipping: " +getShipping()+ 
+				"\nTotal Price: " +(getTotalPrice() + getTaxes() + getShipping());
 		
 		return str;
 	}
-	
 }
