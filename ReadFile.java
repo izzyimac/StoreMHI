@@ -1,4 +1,4 @@
-package DepartmentStore;
+package project;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -32,7 +32,7 @@ public Cart loadAndAnalyzeFile() throws IOException
 		 	
 	        String path = classpathRoot.getPath() + "/";
 	        		        
-	       path = path + "../src/DepartmentStore/";
+	       path = path + "../src/project/";
 	       
             FileReader fileReader = 
                 new FileReader(path + fileName);
@@ -55,7 +55,7 @@ public Cart loadAndAnalyzeFile() throws IOException
             
             int index = 0;
 	 
-       while((itemType = bufferedReader.readLine()) != null && (brand = bufferedReader.readLine()) != null  && (type = bufferedReader.readLine())!= null && (stringPrice = bufferedReader.readLine())!= null ) {
+       while((itemType = bufferedReader.readLine()) != null && (type = bufferedReader.readLine()) != null  && (brand = bufferedReader.readLine())!= null && (stringPrice = bufferedReader.readLine())!= null ) {
     	   
     	   double price = Double.parseDouble(stringPrice);
     	   
@@ -66,7 +66,7 @@ public Cart loadAndAnalyzeFile() throws IOException
         	index++;
     	}
     	else if (itemType.equalsIgnoreCase("kitchenware")){
-    		Item oneItem = new Kitchenware(type, brand, price);
+    		Item oneItem = new KitchenWare(type, brand, price);
     	 	items[index] = oneItem;
         	
         	index++;
