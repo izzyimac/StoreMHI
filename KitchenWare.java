@@ -9,31 +9,36 @@ public class KitchenWare extends Item{
 	
 	public KitchenWare()
 	{
-		super();
-		rating = "NONE";
+		//super();
+		//rating = "NONE";
 	}
 	
 	public KitchenWare(String t)
 	{
-		super(t);
+		type = t;
 		rating = "NONE";
 	}
 	
 	public KitchenWare(String t, String b)
 	{
-		super(t, b);
+		type = t;
+		brand = b;
 		rating = "NONE";
 	}
 	
 	public KitchenWare(String t, String b, double p)
 	{
-		super(t, b, p);
+		type = t;
+		brand = b;
+		price = p;		
 		rating = "NONE";
 	}
 	
 	public KitchenWare(String t, String b, double p, String r)
 	{
-		super(t, b, p);
+		type = t;
+		brand = b;
+		price = p;
 		rating = r;
 	}
 	
