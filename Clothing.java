@@ -1,30 +1,33 @@
 package project;
 
-public class Clothing extends Item{
+public class Clothing extends Item implements Basic{
 	
 	//public String name;
 	public double price;
 	public String brand;
 	public String type;
-	public double size;
+	public int size;
 		
 	public Clothing()
 	{
-		super();
+		//super();
 	}
-	public Clothing(String type,  String brand, double price){
-		this.type = type;
-		this.brand = brand;
-		this.price = price;
-	}
-	public Clothing(String type, String brand, double price, double size)
+	
+	public Clothing(String type, String brand, double price, int size)
 	{
 		super(type, brand, price);
 		setSize(size);
 		
 	}
 	
-	public double getSize(){
+	public Clothing(String type, String brand, double price) {
+		//super(type, brand, price);
+		setType(type);
+		setBrand(brand);
+		setPrice(price);
+	}
+
+	public int getSize(){
 		return size;
 	}
 	
@@ -56,7 +59,7 @@ public class Clothing extends Item{
 		this.price = price;
 	}
 
-	public void setSize(double size) {
+	public void setSize(int size) {
 		this.size = size;
 	}
 
