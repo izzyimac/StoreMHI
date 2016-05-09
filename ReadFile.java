@@ -42,9 +42,9 @@ public Cart loadAndAnalyzeFile() throws IOException
             
             String line = bufferedReader.readLine();
    
-            line = bufferedReader.readLine();
+    //        line = bufferedReader.readLine();
             int itemsCount = Integer.parseInt(line);
-           
+           System.out.println(itemsCount);
             
            Item[] items = new Item[itemsCount];
 
