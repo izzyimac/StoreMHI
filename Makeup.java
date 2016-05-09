@@ -9,7 +9,7 @@ public class Makeup extends Item{
 	
 	public Makeup()
 	{
-		super();
+		//super();
 		//rating = "NONE";
 	}
 	
@@ -17,6 +17,7 @@ public class Makeup extends Item{
 	{
 		super(t);
 		//rating = "NONE";
+		
 	}
 	
 	public Makeup(String t, String b)
@@ -27,14 +28,20 @@ public class Makeup extends Item{
 	
 	public Makeup(String t, String b, double p)
 	{
-		super(t, b, p);
+		//super(t, b, p);
 		//rating = "NONE";
+		setType(t);
+		setBrand(b);
+		setPrice(p);
 	}
 	
 	public Makeup(String t, String b, double p, String r)
 	{
-		super(t, b, p);
+		//super(t, b, p);
 		//rating = r;
+		setType(t);
+		setBrand(b);
+		setPrice(p);
 	}
 	
 	
