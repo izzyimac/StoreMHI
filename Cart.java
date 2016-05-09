@@ -26,7 +26,7 @@ public class Cart{
 		String name = "";
 		
 		for (int i = 0; i < product.length ; i++){
-			name += "/n" +product[i].getType();  // calls get price method for each object in cart
+			name += "\n" +product[i].getType();  // calls get price method for each object in cart
 		}
 		
 		return name;
