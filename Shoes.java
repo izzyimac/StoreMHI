@@ -1,8 +1,8 @@
 package project;
 
-import java.awt.Color;
+//import java.awt.Color;
 
-public class Shoes {
+public class Shoes extends Item{
 
 	public double price;
 	public String brand;
@@ -58,8 +58,8 @@ public class Shoes {
 	}
 
 	public String toString() {
-		return " Brand: " + getBrand() + "Type: "
-				+ getType() + "Price: " + getPrice() + "Size: " + getSize();
+		return "Brand: " + getBrand() + " Type: "
+				+ getType() + " Price: $" + getPrice() +  "Size: " + getSize();
 	}
 
 }

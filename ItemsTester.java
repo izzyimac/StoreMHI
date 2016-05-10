@@ -3,7 +3,8 @@ package project;
 public class ItemsTester {
 
 	public static void main(String[] args) {
-
+		// TODO Auto-generated method stub
+		
 		System.out.println("TESTING KITCHENWARE");
 		KitchenWare fork = new KitchenWare();
 		System.out.println(fork);
@@ -29,7 +30,7 @@ public class ItemsTester {
 		Clothing dress = new Clothing();
 		System.out.println(dress);
 		dress.setBrand("Free People");
-		dress.setPrice(30.00);
+		dress.setPrice(70.95);
 		dress.setType("dress");
 		dress.setSize(4);
 		System.out.println(dress);
