@@ -3,20 +3,20 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-
-
-
-
 import static java.lang.System.*;
 import static java.util.Arrays.*;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 
 public class ReadFile {
+	
+	private static ObjectOutputStream output;
 
 
 public Cart loadAndAnalyzeFile() throws IOException
@@ -84,7 +84,7 @@ public Cart loadAndAnalyzeFile() throws IOException
         	index++;
     	}
             	//Item oneItem = new Item(type, brand, Double.parseDouble(stringPrice));
-            	 
+            
       
        }
            myCart.setArray(items);;
@@ -101,11 +101,32 @@ public Cart loadAndAnalyzeFile() throws IOException
             System.out.println(
                 "Error reading file '" 
                 + fileName + "'");                  
-
         }
 	 
 	 
 	 return myCart;
+	
+}
+
+
+// WRITE TO FILE
+
+public void openFile()
+{
+	
+	try {
+		output = new ObjectOutputStream( new FileOutputStream("src/project/order.dat"));
+	} 
+	catch (IOException e) {
+		
+		e.printStackTrace();
+		System.out.println("cannot open file");
+	}
+	catch (SecurityException securityException)
+	{
+		System.err.println("no access");
+	}
+	
 	
 }
 	
@@ -115,9 +136,36 @@ public Cart loadAndAnalyzeFile() throws IOException
 
 
 		ReadFile myRunner = new ReadFile();
+		
+		myRunner.openFile();
+		
 		Cart myCart = myRunner.loadAndAnalyzeFile();
 		
 		out.println(myCart);
 		
+		//output.writeObject(myCart);
+		
+		String out = new String(myCart.toString());
+		
+		/*for (int i = 0; i < out.length(); i++)
+		{
+			output.writeChar(out.charAt(i));
+		}*/
+	   
+		
+		output.writeObject(out);
+		
+		
+		
+		
+		
+		
+		
+		
 }
+ 
+ 
+ 
+ 
+ 
 }
