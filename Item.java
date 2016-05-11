@@ -16,21 +16,6 @@ public abstract class Item implements Basic {
 		//material = "none";
 	}
 	
-	public Item(String t)
-	{
-		brand = "basicbee";
-		type = t;
-		price = 0.0;
-		//material = "none";
-	}
-	
-	public Item(String t, String b)
-	{
-		brand = b;
-		type = t;
-		price = 0.0;
-		//material = "none";
-	}
 
 	public Item(String t, String b, double p)
 	{
@@ -42,30 +27,22 @@ public abstract class Item implements Basic {
 	
 	
 	
-	public String getType()
-	{
-		return type;
-	}
+	public abstract String getType();
 	
-	public void setType(String t)
-	{
-		type = t;
-	}
+	public abstract void setType(String t);
 	
-	public double getPrice()
-	{
-		return price;
-	}
+	public abstract double getPrice();
 	
-	public void setPrice(double p)
-	{
-		price = p;
-	}
+	public abstract void setPrice(double p);
 	
 	public abstract String getBrand();
 	
-	
 	public abstract void setBrand(String b);
+	
+	
+	//public abstract int getRating();
+	
+	//public abstract void setRating(String r);
 	
 	
 	//public abstract String getMaterial();
