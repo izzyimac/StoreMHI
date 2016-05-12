@@ -13,18 +13,19 @@ public class Makeup extends Item{
 		//rating = "NONE";
 	}
 	
-	public Makeup(String t)
+	/*public Makeup(String t)
 	{
-		super(t);
+		//super(t);
 		//rating = "NONE";
 		
 	}
 	
 	public Makeup(String t, String b)
 	{
-		super(t, b);
+		//super(t, b);
 		//rating = "NONE";
-	}
+		
+	}*/
 	
 	public Makeup(String t, String b, double p)
 	{

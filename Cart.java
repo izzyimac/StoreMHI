@@ -53,7 +53,7 @@ public class Cart{
 	public String toString(){
 		String str = "Price of Goods: $"+ Math.round(getTotalPrice()*100.0)/100.0 + "\nNames of Products: "+getNames()+ "\nTaxes: $" 
 				+ Math.round(getTaxes()*100.0)/100.0 + " Shipping: $" +getShipping()+ 
-				"\nTotal Price: $" + Math.round((getTotalPrice() + getTaxes() + getShipping())*100.0)/100.0;
+				"\n\nTotal Price: $" + Math.round((getTotalPrice() + getTaxes() + getShipping())*100.0)/100.0;
 		
 		return str;
 	}

@@ -1,4 +1,4 @@
-package DepartmentStore;
+package project;
 
 public interface Basic {
 	

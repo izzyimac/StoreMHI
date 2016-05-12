@@ -69,11 +69,11 @@ public class KitchenWare extends Item{
 		brand = b;
 	}
 	
-	public void setRatings(String r){
+	public void setRating(String r){
 		rating = r;
 	}
 	
-	public int getRatings(){
+	public int getRating(){
 		int value = 0;
 		if (rating.equals("five")){
 			value  = 5;
